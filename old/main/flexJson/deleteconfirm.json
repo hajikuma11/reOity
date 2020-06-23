@@ -1,0 +1,65 @@
+{
+  "type": "bubble",
+  "styles": {
+    "footer": {
+      "separator": true
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "確認",
+        "weight": "bold",
+        "color": "#47c0cc",
+        "size": "xl"
+      },
+      {
+        "type": "text",
+        "text": "IDを削除しますか？",
+        "size": "xl",
+        "color": "#c43e3e",
+        "wrap": true
+      },
+      {
+        "type": "text",
+        "text": "※IDを削除すると設定も削除されます",
+        "size": "xs",
+        "color": "#13343f",
+        "wrap": true
+      },
+      {
+        "type": "separator",
+        "margin": "sm"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "margin": "sm",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "margin": "xxl",
+            "contents": [
+              {
+                "type": "button",
+                "style": "primary",
+                "color": "#c43e3e",
+                "action": {
+                  "type": "postback",
+                  "label": "Oity!からIDを削除",
+                  "text": "IDを削除します",
+                  "data": "def:sign-out:delete"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

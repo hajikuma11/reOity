@@ -1,0 +1,128 @@
+{
+  "type": "bubble",
+  "styles": {
+    "footer": {
+      "separator": true
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "時刻表",
+        "weight": "bold",
+        "color": "#1DB446",
+        "size": "md"
+      },
+      {
+        "type": "separator",
+        "margin": "md",
+        "color": "#000000"
+      },
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "margin": "xs",
+        "contents": [
+          {
+            "type": "text",
+            "text": "JOSYA",
+            "size": "xl",
+            "gravity": "center",
+            "align": "center",
+            "wrap": true
+          },
+          {
+            "type": "text",
+            "text": "→",
+            "size": "xl",
+            "flex": 0,
+            "align": "center"
+          },
+          {
+            "type": "text",
+            "text": "GESYA",
+            "size": "xl",
+            "gravity": "center",
+            "align": "center",
+            "wrap": true
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "margin": "xs",
+        "color": "#000000"
+      },
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "margin": "sm",
+        "contents": [
+          {
+            "type": "text",
+            "text": "HEIKYU",
+            "size": "xl",
+            "margin": "md",
+            "flex": 0
+          },
+          {
+            "type": "text",
+            "text": "ダイヤ",
+            "size": "md",
+            "align": "start",
+            "gravity": "bottom"
+          },
+          {
+            "type": "separator",
+            "color": "#000000"
+          },
+          {
+            "type": "text",
+            "text": "STH",
+            "size": "xl",
+            "margin": "xxl",
+            "flex": 0,
+            "align": "center"
+          },
+          {
+            "type": "text",
+            "text": "時",
+            "size": "md",
+            "align": "start",
+            "flex": 0,
+            "gravity": "bottom"
+          },
+          {
+            "type": "text",
+            "text": "～",
+            "size": "md",
+            "flex": 0,
+            "gravity": "bottom"
+          },
+          {
+            "type": "text",
+            "text": "ENH",
+            "size": "xl",
+            "margin": "md",
+            "flex": 0
+          },
+          {
+            "type": "text",
+            "text": "時",
+            "size": "md",
+            "align": "start",
+            "gravity": "bottom"
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "margin": "md",
+        "color": "#000000"
+      }
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "type": "bubble",
+  "styles": {
+    "footer": {
+      "separator": true
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "個人設定",
+        "weight": "bold",
+        "color": "#4ac5d6",
+        "size": "xl"
+      },
+      {
+        "type": "text",
+        "text": "通知の設定や、IDの登録、削除などを行えます",
+        "size": "xs",
+        "color": "#777777",
+        "wrap": true
+      },
+      {
+        "type": "separator",
+        "margin": "sm"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "margin": "sm",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "margin": "xl",
+            "contents": [
+              {
+                "type": "button",
+                "style": "primary",
+                "color": "#46aac9",
+                "action": {
+                  "type": "postback",
+                  "label": "Oity!にIDを登録",
+                  "text": "IDを登録",
+                  "data": "def:sign-up"
+                }
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "margin": "xl",
+            "contents": [
+              {
+                "type": "button",
+                "style": "primary",
+                "color": "#46aac9",
+                "action": {
+                  "type": "postback",
+                  "label": "各種設定",
+                  "text": "設定",
+                  "data": "def:setting"
+                }
+              }
+            ]
+          },
+          {
+            "type": "separator",
+            "margin": "xxl"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "margin": "xxl",
+            "contents": [
+              {
+                "type": "button",
+                "style": "primary",
+                "color": "#bf4242",
+                "action": {
+                  "type": "postback",
+                  "label": "Oity!からIDを削除",
+                  "text": "IDを削除",
+                  "data": "def:sign-out:confirm"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
