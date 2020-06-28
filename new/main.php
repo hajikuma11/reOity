@@ -43,5 +43,5 @@ $content_reply = [
 ];
 
 //送信
-require(__DIR__.'/function/send.php');
+require　(__DIR__.'/function/send.php');
 send($content_reply,$token_access);
