@@ -31,7 +31,7 @@ if ($event_type == "message") {//テキスト
 //リプライトークン
 $token_reply = $obj_req->{"events"}[0]->{"replyToken"};
 
-switch ($msg) {
+switch (true) {
   case preg_match('/weather=>/',$msg):
     require_once(__DIR__.'/function/weather.php');
     break;
