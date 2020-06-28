@@ -44,4 +44,4 @@ $content_reply = [
 
 //送信
 require('send.php');
-send($content,$token_access);
+send($content_reply,$token_access);
