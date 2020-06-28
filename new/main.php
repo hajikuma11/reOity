@@ -33,11 +33,23 @@ $token_reply = $obj_req->{"events"}[0]->{"replyToken"};
 
 switch ($msg) {
   case preg_match('/weather=>/',$msg):
-    require_once(__DIR__.'/function/send.php');
+    require_once(__DIR__.'/function/weather.php');
     break;
-  
+
+  case preg_match('/bus=>/',$msg):
+    require_once(__DIR__.'/function/bus.php');
+    break;
+
+  case preg_match('/decimal=>/',$msg):
+    require_once(__DIR__.'/function/decimal.php');
+    break;
+
+  case preg_match('/janken=>/',$msg):
+    require_once(__DIR__.'/function/janken.php');
+    break;
+
   default:
-    # code...
+    require_once(__DIR__.'/function/aum.php');
     break;
 }
 
