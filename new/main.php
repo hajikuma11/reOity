@@ -28,19 +28,18 @@ if ($event_type == "message") {//テキスト
 
 }
 
-
-$aum = [
-  'type' => 'text',
-  'text' => $msg
-];
-
 //リプライトークン
 $token_reply = $obj_req->{"events"}[0]->{"replyToken"};
 
-$content_reply = [
-  'replyToken' => $token_reply,
-  'messages' => [$aum]
-];
+switch ($msg) {
+  case preg_match('/weather=>/',$msg):
+    require_once(__DIR__.'/function/send.php');
+    break;
+  
+  default:
+    # code...
+    break;
+}
 
 //送信
 require_once(__DIR__.'/function/send.php');
