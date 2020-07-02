@@ -118,3 +118,14 @@ for ($i = 0 + $day_num;$i < 7 + $day_num;$i++) {
 
   $title[] = $name.' '.$month.'月'.$day.'日 ('.$week_name[$week].')';
 }
+
+//フレックスメッセージの生成
+
+require_once('createJson.php');
+
+$flex = createFlex($timestamp, $title, $climate_arr, $rain_arr, $maxtemp_arr, $mintemp_arr);
+
+$content_reply = [
+  'replyToken' => $token_reply,
+  'messages' => [$flex]
+];
