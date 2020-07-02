@@ -34,27 +34,27 @@ $token_reply = $obj_req->{"events"}[0]->{"replyToken"};
 switch (true) {
   case preg_match('/mainmenu=>/',$msg):
     require_once(__DIR__.'/function/mainmenu/mainmenu.php');
-    break;
+  break;
 
   case preg_match('/weather=>/',$msg):
     require_once(__DIR__.'/function/weather/weather.php');
-    break;
+  break;
 
   case preg_match('/bus=>/',$msg):
     require_once(__DIR__.'/function/bus/bus.php');
-    break;
+  break;
 
   case preg_match('/decimal=>/',$msg):
     require_once(__DIR__.'/function/decimal/decimal.php');
-    break;
+  break;
 
   case preg_match('/janken=>/',$msg):
     require_once(__DIR__.'/function/janken/janken.php');
-    break;
+  break;
 
   default:
     require_once(__DIR__.'/function/aum.php');
-    break;
+  break;
 }
 
 //送信
