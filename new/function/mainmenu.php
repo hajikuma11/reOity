@@ -1,9 +1,13 @@
 <?php
-$tmp_txt = [
-  'type' => 'text',
-  'text' => "This is\n".basename(__FILE__)
+$json = file_get_contents(__DIR__.'/json/mainmenu.json');
+$arr = json_decode($json,true);
+
+$flex = [
+  'type' => 'flex',
+        'altText' => 'メインメニュー',
+        'contents' => $arr
 ];
 $content_reply = [
   'replyToken' => $token_reply,
-  'messages' => [$tmp_txt]
+  'messages' => [$flex]
 ];
