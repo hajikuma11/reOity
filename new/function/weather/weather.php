@@ -28,6 +28,8 @@ switch (true) {
       'replyToken' => $token_reply,
       'messages' => [$error]
     ];
+    send($content_reply,$token_access);
+    exit();
   break;
 }
 
@@ -50,9 +52,6 @@ $html = file_get_contents($url);
 $html_data = phpQuery::newDocument($html);
 $html_contents = $html_data[".for"]->text();
 $contents_arr = explode("\n", $html_contents);
-
-//空要素を削除
-$contents_arr = array_filter($contents_arr, "strlen");
 
 //カウントの初期化
 $rain_cnt = $maxtemp_cnt = 0;
@@ -85,7 +84,7 @@ for ($i = 0;$i < count($contents_arr);$i++) {
   }
 
   //気温
-  if (strstr($cont,"(")) {
+  if (strstr($content,"(")) {
     continue;
   }
   //最高気温

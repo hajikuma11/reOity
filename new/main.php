@@ -1,4 +1,6 @@
 <?php
+require_once(__DIR__.'/function/send.php');
+
 //アクセストークン
 $token_access = file_get_contents('token.txt');
 
@@ -58,5 +60,4 @@ switch (true) {
 }
 
 //送信
-require_once(__DIR__.'/function/send.php');
 send($content_reply,$token_access);
