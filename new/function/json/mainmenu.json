@@ -47,7 +47,8 @@
             "action": {
               "type": "postback",
               "label": "週間天気予報",
-              "data": "weather=>"
+              "data": "weather=>",
+              "displayText": "週間天気予報を使う"
             }
           },
           {
@@ -76,7 +77,8 @@
             "action": {
               "type": "postback",
               "label": "バス時刻表",
-              "data": "bus=>"
+              "data": "bus=>",
+              "displayText": "バス時刻表機能を使う"
             }
           }
         ]
@@ -109,7 +111,8 @@
             "action": {
               "type": "postback",
               "label": "進数変換",
-              "data": "decimal=>"
+              "data": "decimal=>",
+              "displayText": "進数変換機能を使う"
             }
           },
           {
@@ -142,14 +145,15 @@
             "action": {
               "type": "postback",
               "label": "じゃんけん",
-              "data": "janken=>"
+              "data": "janken=>",
+              "displayText": "じゃんけん！"
             }
           }
         ],
         "margin": "lg"
       }
     ],
-    "backgroundColor": "#0367D3",
+    "backgroundColor": "#2CB7D5",
     "paddingStart": "20px",
     "paddingEnd": "20px",
     "paddingTop": "10px",
