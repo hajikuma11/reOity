@@ -32,6 +32,10 @@ if ($event_type == "message") {//テキスト
 $token_reply = $obj_req->{"events"}[0]->{"replyToken"};
 
 switch (true) {
+  case preg_match('/mainmenu=>/',$msg):
+    require_once(__DIR__.'/function/mainmenu.php');
+    break;
+
   case preg_match('/weather=>/',$msg):
     require_once(__DIR__.'/function/weather.php');
     break;
