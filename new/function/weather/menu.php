@@ -11,7 +11,7 @@ $flex = [
 
 $content_reply = [
     'replyToken' => $token_reply,
-    'messages' => $flex
+    'messages' => [$flex]
 ];
 send($content_reply,$token_access);
 exit();

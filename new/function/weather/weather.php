@@ -125,10 +125,12 @@ for ($i = 0 + $day_num;$i < 7 + $day_num;$i++) {
 //フレックスメッセージの生成
 
 require_once('createJson.php');
+require_once('back.php');
 
-$flex = createFlex($timestamp, $title, $climate_arr, $rain_arr, $maxtemp_arr, $mintemp_arr);
+$flex_main = createFlex($timestamp, $title, $climate_arr, $rain_arr, $maxtemp_arr, $mintemp_arr);
+$flex_back = back();
 
 $content_reply = [
   'replyToken' => $token_reply,
-  'messages' => [$flex]
+  'messages' => [$flex_main, $flex_back]
 ];
