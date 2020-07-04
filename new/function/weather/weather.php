@@ -4,6 +4,10 @@ require_once __DIR__.'/phpQuery-onefile.php';
 
 //指定された都道府県毎にURLと名前を決定
 switch (true) {
+  case preg_match('/menu/', $msg):
+    require_once(__DIR__.'/menu.php');
+  break;
+
   case preg_match('/osaka/', $msg):
     $url = 'https://www.jma.go.jp/jp/week/331.html';
     $name = '大阪府';
