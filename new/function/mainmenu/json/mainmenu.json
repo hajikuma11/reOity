@@ -47,7 +47,7 @@
             "action": {
               "type": "postback",
               "label": "週間天気予報",
-              "data": "weather=>",
+              "data": "weather=>menu",
               "displayText": "週間天気予報を使う"
             }
           },

@@ -14,12 +14,12 @@ switch (true) {
   break;
 
   case preg_match('/kyoto/', $msg):
-    $url = 'https://www.jma.go.jp/jp/week/331.html';
+    $url = 'https://www.jma.go.jp/jp/week/333.html';
     $name = '京都府';
   break;
 
   case preg_match('/hyogo/', $msg):
-    $url = 'https://www.jma.go.jp/jp/week/331.html';
+    $url = 'https://www.jma.go.jp/jp/week/332.html';
     $name = '兵庫県';
   break;
 
