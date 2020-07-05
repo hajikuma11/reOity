@@ -1,9 +1,17 @@
 <?php
 
 if (preg_match('/[012]/', $msg, $user_hand) != false) {
+  $hands = ['0'=>'グー！','1'=>'チョキ！','2'=>'パー！'];
+
   $bot_hand = rand(0,2);
 
-  $result = ($user_hand - $bot_hand + 3) % 3;
+  $flex_bot = [
+    'type' => 'text',
+    'text' => $hands[$bot_hand]
+  ];
+
+  $result = ($user_hand[0] - $bot_hand + 3) % 3;
+
   switch ($result) {
     //あいこ
     case 0:
@@ -35,15 +43,15 @@ if (preg_match('/[012]/', $msg, $user_hand) != false) {
   }
 }
 
-$sel_json = file_get_contents(__DIR__.'/json/select.json');
-$sel_arr = json_decode($sel_json,true);
+require_once('select.php');
+$flex_sel = select();
 
-$flex_sel = [
-  'type' => 'flex',
-        'altText' => 'じゃんけん選択肢',
-        'contents' => $sel_arr
+$flex_txt = [
+  'type' => 'text',
+  'text' => 'じゃーんけーん！'
 ];
+
 $content_reply = [
   'replyToken' => $token_reply,
-  'messages' => [$flex_sel]
+  'messages' => [$flex_txt, $flex_sel]
 ];
