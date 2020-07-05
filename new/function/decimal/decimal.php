@@ -1,9 +1,6 @@
 <?php
-$tmp_txt = [
-  'type' => 'text',
-  'text' => "This is\n".basename(__FILE__)
-];
-$content_reply = [
-  'replyToken' => $token_reply,
-  'messages' => [$tmp_txt]
-];
+$val_arr = explode('=',$msg);
+$base = (int)$val_arr[0];
+$num = (int)$val_arr[1];
+
+require_once('createJson.php');

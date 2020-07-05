@@ -58,21 +58,21 @@
               {
                 "type": "text",
                 "text": "バス時刻表",
-                "color": "#F5F5F5",
+                "color": "#777777",
                 "size": "xl",
                 "flex": 4,
                 "weight": "bold",
                 "style": "normal",
-                "decoration": "none",
+                "decoration": "line-through",
                 "align": "center",
                 "gravity": "bottom"
               }
             ],
-            "backgroundColor": "#00A0E9",
+            "backgroundColor": "#F5F5F5",
             "paddingAll": "10px",
             "cornerRadius": "45px",
             "borderWidth": "2px",
-            "borderColor": "#ffffff",
+            "borderColor": "#777777",
             "margin": "lg",
             "action": {
               "type": "postback",
