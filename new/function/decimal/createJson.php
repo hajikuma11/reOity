@@ -1,6 +1,6 @@
 <?php
 function createFlex($base, $color_arr, $two_d, $eig_d, $ten_d, $sit_d) {
-  $flex_data =
+  $flex_contents =
   [
     "type" => "bubble",
     "body" => [
@@ -54,7 +54,7 @@ function createFlex($base, $color_arr, $two_d, $eig_d, $ten_d, $sit_d) {
                   "text" => "$two_d"
                 ]
               ],
-              "backgroundColor" => "$color_arr[0]",
+              "backgroundColor" => "$color_arr[2]",
               "action" => [
                 "type" => "message",
                 "label" => "$two_d",
@@ -82,7 +82,7 @@ function createFlex($base, $color_arr, $two_d, $eig_d, $ten_d, $sit_d) {
                   "align" => "end"
                 ]
               ],
-              "backgroundColor" => "$color_arr[1]",
+              "backgroundColor" => "$color_arr[8]",
               "margin" => "md",
               "action" => [
                 "type" => "message",
@@ -111,7 +111,7 @@ function createFlex($base, $color_arr, $two_d, $eig_d, $ten_d, $sit_d) {
                   "align" => "end"
                 ]
               ],
-              "backgroundColor" => "$color_arr[2]",
+              "backgroundColor" => "$color_arr[10]",
               "margin" => "md",
               "action" => [
                 "type" => "message",
@@ -140,7 +140,7 @@ function createFlex($base, $color_arr, $two_d, $eig_d, $ten_d, $sit_d) {
                   "align" => "end"
                 ]
               ],
-              "backgroundColor" => "$color_arr[3]",
+              "backgroundColor" => "$color_arr[16]",
               "margin" => "md",
               "action" => [
                 "type" => "message",
@@ -156,6 +156,12 @@ function createFlex($base, $color_arr, $two_d, $eig_d, $ten_d, $sit_d) {
         ]
       ]
     ]
+  ];
+
+  $flex_data = [
+    'type' => 'flex',
+    'altText' => '進数変換',
+    'contents' => $flex_contents
   ];
 
   return $flex_data;
