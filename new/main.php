@@ -46,6 +46,10 @@ switch (true) {
     require_once(__DIR__.'/function/bus/bus.php');
   break;
 
+  case preg_match('/decimal=>/',$msg):
+    require_once(__DIR__.'/function/decimal/desc.php');
+  break;
+
   case preg_match('/([0-9]+)=([0-9]+)/',$msg):
     require_once(__DIR__.'/function/decimal/decimal.php');
   break;
