@@ -125,7 +125,7 @@ for ($i = 0 + $day_num;$i < 7 + $day_num;$i++) {
 //フレックスメッセージの生成
 
 require_once('createJson.php');
-require_once('back.php');
+require_once(__DIR__.'/../back/back.php');
 
 $flex_main = createFlex($timestamp, $title, $climate_arr, $rain_arr, $maxtemp_arr, $mintemp_arr);
 $flex_back = back();

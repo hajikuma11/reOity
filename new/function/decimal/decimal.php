@@ -3,7 +3,7 @@ $val_arr = explode('=',$msg);
 $base = (int)$val_arr[0];
 $num = (int)$val_arr[1];
 
-if (count($num) > 15) {
+if (strlen((string)$num) > 15) {
   $error = [
     'type' => 'text',
     'text' => '１５桁以下の値のみ対応しています。'
@@ -30,9 +30,12 @@ $ten_data = base_convert($num, $base, 10);
 $sit_data = base_convert($num, $base, 16);
 
 require_once('createJson.php');
-$flex = createFlex($base, $color, $two_data, $eig_data, $ten_data, $sit_data);
+require_once(__DIR__.'/../back/back.php');
+
+$flex_main = createFlex($base, $color, $two_data, $eig_data, $ten_data, $sit_data);
+$flex_back = back();
 
 $content_reply = [
   'replyToken' => $token_reply,
-  'messages' => [$flex]
+  'messages' => [$flex_main, $flex_back]
 ];
