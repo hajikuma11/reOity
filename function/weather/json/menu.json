@@ -1,0 +1,173 @@
+{
+  "type": "bubble",
+  "size": "mega",
+  "header": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "どの情報を見ますか？",
+        "align": "start",
+        "weight": "bold"
+      }
+    ],
+    "paddingAll": "10px"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "大阪府",
+                "color": "#F5F5F5",
+                "size": "xl",
+                "flex": 4,
+                "weight": "bold",
+                "style": "normal",
+                "decoration": "none",
+                "align": "center",
+                "gravity": "bottom"
+              }
+            ],
+            "backgroundColor": "#00A0E9",
+            "paddingAll": "10px",
+            "cornerRadius": "45px",
+            "borderWidth": "2px",
+            "borderColor": "#ffffff",
+            "action": {
+              "type": "postback",
+              "label": "大阪府",
+              "data": "weather=>osaka",
+              "displayText": "大阪府の週間天気予報"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "京都府",
+                "color": "#F5F5F5",
+                "size": "xl",
+                "flex": 4,
+                "weight": "bold",
+                "style": "normal",
+                "decoration": "none",
+                "align": "center",
+                "gravity": "bottom"
+              }
+            ],
+            "backgroundColor": "#00A0E9",
+            "paddingAll": "10px",
+            "cornerRadius": "45px",
+            "borderWidth": "2px",
+            "borderColor": "#ffffff",
+            "margin": "lg",
+            "action": {
+              "type": "postback",
+              "label": "京都府",
+              "data": "weather=>kyoto",
+              "displayText": "京都府の週間天気予報"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "兵庫県",
+                "color": "#F5F5F5",
+                "size": "xl",
+                "flex": 4,
+                "weight": "bold",
+                "style": "normal",
+                "decoration": "none",
+                "align": "center",
+                "gravity": "bottom"
+              }
+            ],
+            "backgroundColor": "#00A0E9",
+            "paddingAll": "10px",
+            "cornerRadius": "45px",
+            "borderWidth": "2px",
+            "borderColor": "#ffffff",
+            "margin": "lg",
+            "action": {
+              "type": "postback",
+              "label": "兵庫県",
+              "data": "weather=>hyogo",
+              "displayText": "兵庫県の週間天気予報"
+            }
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "filler"
+              }
+            ]
+          },
+          {
+            "type": "separator",
+            "margin": "md",
+            "color": "#ffffff"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "戻る",
+                "align": "center",
+                "gravity": "bottom",
+                "decoration": "none",
+                "style": "normal",
+                "weight": "bold",
+                "size": "lg",
+                "color": "#5E5E5E"
+              }
+            ],
+            "borderColor": "#ffffff",
+            "borderWidth": "2px",
+            "cornerRadius": "45px",
+            "paddingAll": "5px",
+            "margin": "md",
+            "backgroundColor": "#ffffff",
+            "action": {
+              "type": "postback",
+              "label": "戻る",
+              "data": "mainmenu=>",
+              "displayText": "もどる"
+            }
+          }
+        ],
+        "margin": "lg"
+      }
+    ],
+    "backgroundColor": "#2CB7D5",
+    "paddingStart": "20px",
+    "paddingEnd": "20px",
+    "paddingTop": "10px",
+    "paddingBottom": "10px"
+  }
+}

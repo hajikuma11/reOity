@@ -1,0 +1,73 @@
+{
+  "type": "bubble",
+  "size": "mega",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "もう一度する",
+            "align": "center",
+            "gravity": "bottom",
+            "decoration": "none",
+            "style": "normal",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#5E5E5E"
+          }
+        ],
+        "borderColor": "#ffffff",
+        "borderWidth": "2px",
+        "cornerRadius": "45px",
+        "paddingAll": "5px",
+        "margin": "md",
+        "backgroundColor": "#ffffff",
+        "action": {
+          "type": "postback",
+          "label": "もう一度する",
+          "data": "janken=>",
+          "displayText": "もう一度！"
+        }
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "メインメニューに戻る",
+            "align": "center",
+            "gravity": "bottom",
+            "decoration": "none",
+            "style": "normal",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#5E5E5E"
+          }
+        ],
+        "borderColor": "#ffffff",
+        "borderWidth": "2px",
+        "cornerRadius": "45px",
+        "paddingAll": "5px",
+        "margin": "md",
+        "backgroundColor": "#ffffff",
+        "action": {
+          "type": "postback",
+          "label": "戻る",
+          "data": "mainmenu=>",
+          "displayText": "もどる"
+        }
+      }
+    ],
+    "backgroundColor": "#2CB7D5",
+    "paddingStart": "20px",
+    "paddingEnd": "20px",
+    "paddingTop": "10px",
+    "paddingBottom": "10px"
+  }
+}

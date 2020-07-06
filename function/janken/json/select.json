@@ -1,0 +1,107 @@
+{
+  "type": "bubble",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "どの手をだす？",
+        "weight": "bold",
+        "size": "xl"
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "horizontal",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "グー",
+            "align": "center",
+            "gravity": "bottom",
+            "decoration": "none",
+            "style": "normal",
+            "size": "lg",
+            "color": "#F5F5F5",
+            "weight": "bold"
+          }
+        ],
+        "borderColor": "#ffffff",
+        "borderWidth": "2px",
+        "cornerRadius": "45px",
+        "paddingAll": "5px",
+        "backgroundColor": "#00A0E9",
+        "action": {
+          "type": "postback",
+          "label": "グー",
+          "data": "janken=>0",
+          "displayText": "グー！"
+        }
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "チョキ",
+            "align": "center",
+            "gravity": "bottom",
+            "decoration": "none",
+            "style": "normal",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#F5F5F5"
+          }
+        ],
+        "borderColor": "#ffffff",
+        "borderWidth": "2px",
+        "cornerRadius": "45px",
+        "paddingAll": "5px",
+        "margin": "sm",
+        "backgroundColor": "#00A0E9",
+        "action": {
+          "type": "postback",
+          "label": "チョキ",
+          "data": "janken=>1",
+          "displayText": "チョキ！"
+        }
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "パー",
+            "align": "center",
+            "gravity": "bottom",
+            "decoration": "none",
+            "style": "normal",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#F5F5F5"
+          }
+        ],
+        "borderColor": "#ffffff",
+        "borderWidth": "2px",
+        "cornerRadius": "45px",
+        "paddingAll": "5px",
+        "margin": "sm",
+        "backgroundColor": "#00A0E9",
+        "action": {
+          "type": "postback",
+          "label": "パー！",
+          "data": "janken=>2",
+          "displayText": "パー！"
+        }
+      }
+    ]
+  }
+}
