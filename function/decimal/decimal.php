@@ -1,7 +1,7 @@
 <?php
 $val_arr = explode('=',$msg);
 $base = (int)$val_arr[0];
-$num = (int)$val_arr[1];
+$num = $val_arr[1];
 
 if (strlen((string)$num) > 15) {
   $error = [
