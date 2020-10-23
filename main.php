@@ -50,7 +50,7 @@ switch (true) {
     require_once(__DIR__.'/function/decimal/desc.php');
   break;
 
-  case preg_match('/([0-9]+)=([0-9]+)/',$msg):
+  case preg_match('/([0-9]+)=([a-z]|[0-9]+)/',$msg):
     require_once(__DIR__.'/function/decimal/decimal.php');
   break;
 
