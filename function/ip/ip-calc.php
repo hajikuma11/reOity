@@ -1,6 +1,6 @@
 <?php
 //テスト用メッセージ
-$msg = '224.168.1.10/28';
+$msg = '192.168.1.10/28';
 preg_match('/([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3})/',$msg,$ip);
 
 if (preg_match('/([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3})\/([0-9]{1,2})/',$msg,$msg_arr)) {
@@ -26,6 +26,10 @@ for ($i=0;$i<4;$i++) {
   $broadcast_addr_arr[] = bindec($hanten | $ip_dec_arr[$i]);
 }
 
+echo "\n";
+echo "Object:".$msg;
+echo "\n";
+echo "=========================\n";
 echo 'NetworkAddress:'.implode(".",$network_addr_arr);
 echo "\n";
 echo 'BroadcastAddress:'.implode(".",$broadcast_addr_arr);
@@ -34,3 +38,5 @@ echo "Subnets:".(2**(32-$mask));
 echo "\n";
 $addr_class_arr = ['A','B','C','D(IPマルチキャスト用)','E(実験用)'];
 echo "AddressClass:".$addr_class_arr[strpos($ip_dec_arr[0],'0')];
+echo "\n";
+echo "=========================\n";
