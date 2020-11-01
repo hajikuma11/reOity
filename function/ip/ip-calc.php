@@ -27,6 +27,34 @@ for ($i=0;$i<4;$i++) {
   $broadcast_addr_arr[] = bindec($hanten | $ip_dec_arr[$i]);
 }
 
+$net_dec = '0b';
+$broad_dec = '0b';
+for ($i=0;$i<4;$i++) {
+  $net_dec .= str_pad(decbin($network_addr_arr[$i]), 8, '0', STR_PAD_LEFT);
+  $broad_dec .= str_pad(decbin($broadcast_addr_arr[$i]), 8, '0', STR_PAD_LEFT);
+}
+
+
+$host_a = bindec($net_dec);
+$host_b = bindec($broad_dec);
+$bit = 0b1;
+
+$host_arr = [];
+$host_arr[] = decbin($host_a + $bit);
+$host_arr[] = decbin($host_b - $bit);
+
+require_once('createJson.php');
+require_once(__DIR__.'/../back/back.php');
+
+$addr_class_arr = ['A','B','C','D(IPマルチキャスト用)','E(実験用)'];
+$flex_main = createFlex($ip[0],$mask,implode(".",$network_addr_arr),$host_arr,implode(".",$broadcast_addr_arr),$addr_class_arr[strpos($ip_dec_arr[0],'0')]);
+$flex_back = back();
+
+$content_reply = [
+  'replyToken' => $token_reply,
+  'messages' => [$flex_main, $flex_back]
+];
+
 echo "\n";
 echo "Object:".$msg;
 echo "\n";
@@ -37,7 +65,6 @@ echo 'BroadcastAddress:'.implode(".",$broadcast_addr_arr);
 echo "\n";
 echo "Subnets:".(2**(32-$mask));
 echo "\n";
-$addr_class_arr = ['A','B','C','D(IPマルチキャスト用)','E(実験用)'];
 echo "AddressClass:".$addr_class_arr[strpos($ip_dec_arr[0],'0')];
 echo "\n";
 echo "=========================\n";
