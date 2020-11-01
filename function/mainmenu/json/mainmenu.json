@@ -93,6 +93,41 @@
             "contents": [
               {
                 "type": "text",
+                "text": "サブネット計算",
+                "align": "center",
+                "gravity": "bottom",
+                "decoration": "none",
+                "style": "normal",
+                "size": "lg",
+                "color": "#F5F5F5",
+                "weight": "bold"
+              }
+            ],
+            "borderColor": "#ffffff",
+            "borderWidth": "2px",
+            "cornerRadius": "45px",
+            "paddingAll": "5px",
+            "backgroundColor": "#00A0E9",
+            "action": {
+              "type": "postback",
+              "label": "サブネット計算",
+              "data": "ip-calc=>",
+              "displayText": "サブネット計算機能を使う"
+            }
+          }
+        ],
+        "margin": "lg"
+      },
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
                 "text": "進数変換",
                 "align": "center",
                 "gravity": "bottom",

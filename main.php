@@ -47,7 +47,7 @@ switch (true) {
   break;
 
   case preg_match('/decimal=>/',$msg):
-    require_once(__DIR__.'/function/decimal/desc.php');
+    require_once(__DIR__.'/function/decimal/decimal-desc.php');
   break;
 
   case preg_match('/([0-9]+)=([a-z]|[0-9]+)/',$msg):
@@ -56,6 +56,10 @@ switch (true) {
 
   case preg_match('/janken=>/',$msg):
     require_once(__DIR__.'/function/janken/janken.php');
+  break;
+
+  case preg_match('/ip-calc=>/',$msg):
+    require_once(__DIR__.'/function/ip/ip-desc.php');
   break;
 
   case preg_match('/([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3})/',$msg,$ip):

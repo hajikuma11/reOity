@@ -1,5 +1,5 @@
 <?php
-$json = file_get_contents(__DIR__.'/json/desc.json');
+$json = file_get_contents(__DIR__.'/json/decimal-desc.json');
 $arr = json_decode($json,true);
 
 $flex = [
