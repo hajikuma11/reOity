@@ -43,7 +43,7 @@ $host_arr = [];
 $host_arr[] = decbin($host_a + $bit);
 $host_arr[] = decbin($host_b - $bit);
 
-require_once('createJson.php');
+require_once('createResult.php');
 require_once(__DIR__.'/../back/back.php');
 
 $addr_class_arr = ['A','B','C','D(IPマルチキャスト用)','E(実験用)'];
