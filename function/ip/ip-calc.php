@@ -1,9 +1,4 @@
 <?php
-// テスト用メッセージ
-$msg = '192.168.1.10/28';
-preg_match('/([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3})/',$msg,$ip);
-// テスト用メッセージ
-
 if (preg_match('/([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3})\/([0-9]{1,2})/',$msg,$msg_arr)) {
   $mask = $msg_arr[5];
 } else {
@@ -34,14 +29,19 @@ for ($i=0;$i<4;$i++) {
   $broad_dec .= str_pad(decbin($broadcast_addr_arr[$i]), 8, '0', STR_PAD_LEFT);
 }
 
-
 $host_a = bindec($net_dec);
 $host_b = bindec($broad_dec);
 $bit = 0b1;
+$a_arr = str_split(decbin($host_a + $bit),8);
+$b_arr = str_split(decbin($host_b - $bit),8);
 
-$host_arr = [];
-$host_arr[] = decbin($host_a + $bit);
-$host_arr[] = decbin($host_b - $bit);
+$a_str = '';
+$b_str = '';
+for ($i=0;$i<4;$i++) {
+  $a_str .= bindec($a_arr[$i]).'.';
+  $b_str .= bindec($b_arr[$i]).'.';
+}
+$host_arr = [rtrim($a_str,'.'), rtrim($b_str,'.')];
 
 require_once('createResult.php');
 require_once(__DIR__.'/../back/back.php');
@@ -54,17 +54,3 @@ $content_reply = [
   'replyToken' => $token_reply,
   'messages' => [$flex_main, $flex_back]
 ];
-
-echo "\n";
-echo "Object:".$msg;
-echo "\n";
-echo "=========================\n";
-echo 'NetworkAddress:'.implode(".",$network_addr_arr);
-echo "\n";
-echo 'BroadcastAddress:'.implode(".",$broadcast_addr_arr);
-echo "\n";
-echo "Subnets:".(2**(32-$mask));
-echo "\n";
-echo "AddressClass:".$addr_class_arr[strpos($ip_dec_arr[0],'0')];
-echo "\n";
-echo "=========================\n";
