@@ -24,6 +24,10 @@ if ($event_type == "message") {//テキスト
   //ポストバックデータ
   $msg = $obj_req->{"events"}[0]->{"postback"}->{"data"};
 
+}elseif ($event_type == "postback") {
+
+  require_once(__DIR__.'/function/beacon/beacon.php');
+
 } else {
 
   error_log(print_r($obj_req, true));
