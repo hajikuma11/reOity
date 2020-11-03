@@ -26,6 +26,7 @@ if ($event_type == "message") {//テキスト
 
 } else {
 
+  error_log(print_r($obj_req, true));
   exit;
 
 }
